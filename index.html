@@ -176,7 +176,6 @@
     </div>
 
     <div class="cards-grid">
-      <!-- Card 1 (Ganti URL foto sesuai kebutuhan) -->
       <div class="divisi-card" data-category="tim-utama">
         <div class="card-banner bg-coral" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop');">
           <span class="watermark">PNC</span>
@@ -194,7 +193,6 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="divisi-card" data-category="tim-putri">
         <div class="card-banner bg-sky" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=800&auto=format&fit=crop');">
           <span class="watermark">SKD</span>
@@ -212,7 +210,6 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
       <div class="divisi-card" data-category="akademi">
         <div class="card-banner bg-lime" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=800&auto=format&fit=crop');">
           <span class="watermark">FUN</span>
@@ -230,7 +227,6 @@
         </div>
       </div>
 
-      <!-- Card 4 -->
       <div class="divisi-card" data-category="official">
         <div class="card-banner bg-purple" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop');">
           <span class="watermark">DOC</span>
@@ -317,50 +313,109 @@
     </div>
   </section>
 
-  <!-- FOOTER DENGAN INFORMASI KONTAK -->
-  <footer id="kontak" class="footer">
-    <div class="footer-container">
-      <!-- Brand & Deskripsi -->
-      <div class="footer-brand">
-        <a href="#" class="brand-logo white">
-          <div class="logo-wrapper bg-white-pnc">
-            <img src="https://upload.wikimedia.org/wikipedia/id/d/db/Politeknik_Negeri_Cilacap.png" alt="Logo PNC" class="logo-pnc" onerror="this.src='https://pnc.ac.id/wp-content/uploads/2021/04/Logo-PNC-Full-High-Res-1024x1024.png'">
+  <!-- SECTION HUBUNGI KAMI (BENTO GRID CONTACT) -->
+  <section id="kontak" class="contact-section">
+    <div class="contact-container">
+      
+      <!-- Sisi Kiri: Text & Online Indicator -->
+      <div class="contact-left">
+        <span class="contact-badge">HUBUNGI KAMI</span>
+        <h2 class="contact-title">
+          Ada yang ingin<br>
+          kamu <span class="italic-lime">tanyakan?</span>
+        </h2>
+        <p class="contact-desc">
+          Tim UKM Futsal PNC siap membantumu menemukan komunitas, informasi pendaftaran, hingga jadwal kegiatan.
+        </p>
+
+        <div class="online-status">
+          <span class="status-dot"></span>
+          <div class="status-text">
+            <strong>Kami sedang online</strong>
+            <span>Biasanya membalas dalam beberapa menit</span>
           </div>
-          <div class="brand-text">
-            <span class="logo-title white-text">FUTSAL <strong>PNC</strong></span>
-            <span class="logo-sub white-sub">Politeknik Negeri Cilacap</span>
+        </div>
+      </div>
+
+      <!-- Sisi Kanan: Bento Grid Contact Cards -->
+      <div class="contact-grid">
+        
+        <!-- Kartu 1: WhatsApp (Lime Highlight) -->
+        <a href="https://wa.me/6285867431371" target="_blank" class="contact-card card-whatsapp">
+          <div class="card-header">
+            <div class="card-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <span class="card-arrow">&rarr;</span>
+          </div>
+          <div class="card-info">
+            <span class="card-label">WHATSAPP</span>
+            <h3 class="card-value">+62 858 6743 1371</h3>
+            <p class="card-subtext">Chat dengan pengurus pusat</p>
           </div>
         </a>
-        <p class="footer-tagline">
-          Wadah resmi pembinaan bakat, taktik, dan prestasi atlet futsal mahasiswa Politeknik Negeri Cilacap.
-        </p>
+
+        <!-- Kartu 2: Email -->
+        <a href="mailto:futsalpnc@gmail.com" class="contact-card card-dark">
+          <div class="card-header">
+            <div class="card-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <span class="card-arrow">&rarr;</span>
+          </div>
+          <div class="card-info">
+            <span class="card-label">EMAIL</span>
+            <h3 class="card-value">futsalpnc@gmail.com</h3>
+            <p class="card-subtext">Untuk informasi dan kolaborasi</p>
+          </div>
+        </a>
+
+        <!-- Kartu 3: Sekretariat -->
+        <div class="contact-card card-dark">
+          <div class="card-header">
+            <div class="card-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+          </div>
+          <div class="card-info">
+            <span class="card-label">SEKRETARIAT</span>
+            <h3 class="card-value">Gedung Student Center</h3>
+            <p class="card-subtext">Lantai 1, Ruang UKM - Politeknik Negeri Cilacap</p>
+          </div>
+        </div>
+
+        <!-- Kartu 4: Instagram -->
+        <a href="https://instagram.com/futsalpncofficial" target="_blank" class="contact-card card-dark">
+          <div class="card-header">
+            <div class="card-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </div>
+            <span class="card-arrow">&rarr;</span>
+          </div>
+          <div class="card-info">
+            <span class="card-label">IKUTI KABAR TERBARU</span>
+            <h3 class="card-value">@futsalpncofficial</h3>
+            <p class="card-subtext">Dokumentasi match & kegiatan</p>
+          </div>
+        </a>
+
       </div>
 
-      <!-- Detail Informasi Kontak -->
-      <div class="footer-contact">
-        <h4 class="footer-heading">Informasi & Sekretariat UKM</h4>
-        <ul class="contact-list">
-          <li>
-            <span class="icon">📍</span> 
-            <span>Gedung UKM / Lapangan Olahraga PNC, Jl. Dr. Soetomo No.1, Sidakaya, Cilacap Selatan</span>
-          </li>
-          <li>
-            <span class="icon">📱</span> 
-            <span>+62 812-3456-7890 (Humas & Pengurus UKM)</span>
-          </li>
-          <li>
-            <span class="icon">✉️</span> 
-            <span>futsal@pnc.ac.id</span>
-          </li>
-          <li>
-            <span class="icon">📸</span> 
-            <span>@futsalpnc_official</span>
-          </li>
-        </ul>
-      </div>
     </div>
+  </section>
 
-    <div class="footer-bottom">
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="#" class="brand-logo white">
+        <div class="logo-wrapper bg-white-pnc">
+          <img src="https://upload.wikimedia.org/wikipedia/id/d/db/Politeknik_Negeri_Cilacap.png" alt="Logo PNC" class="logo-pnc" onerror="this.src='https://pnc.ac.id/wp-content/uploads/2021/04/Logo-PNC-Full-High-Res-1024x1024.png'">
+        </div>
+        <div class="brand-text">
+          <span class="logo-title white-text">FUTSAL <strong>PNC</strong></span>
+          <span class="logo-sub white-sub">Politeknik Negeri Cilacap</span>
+        </div>
+      </a>
       <p class="copyright">&copy; 2026 UKM Futsal Politeknik Negeri Cilacap. All rights reserved.</p>
     </div>
   </footer>
