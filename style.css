@@ -1,5 +1,5 @@
 /* ==========================================================================
-   OPSI 1: ELECTRIC BLUE & NEON LIME PALETTE
+   VARIABLES & COLOR PALETTE (ELECTRIC BLUE & NEON LIME)
    ========================================================================== */
 :root {
   --bg-cream: #F8FAFC;             
@@ -674,6 +674,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  
+  /* Pengaturan agar foto background terpasang proporsional & rapi */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .bg-coral { background-color: var(--card-coral); }
