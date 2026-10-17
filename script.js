@@ -56,7 +56,7 @@ window.handleFormSubmit = function(event) {
   const divisi = inputs[3].options[inputs[3].selectedIndex].text;
 
   // Ganti nomor WA aktif pengurus di sini (format 628xxx)
-  const nomorWAAdmin = '6281234567890'; 
+  const nomorWAAdmin = '6285867431371'; 
 
   const pesan = `Halo Pengurus UKM Futsal PNC,%0A%0ASaya ingin mendaftar sebagai anggota baru UKM Futsal. Berikut data diri saya:%0A%0A` +
     `• *Nama Lengkap:* ${encodeURIComponent(nama)}%0A` +
