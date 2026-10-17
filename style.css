@@ -675,7 +675,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   
-  /* Pengaturan agar foto background terpasang proporsional & rapi */
+  /* Background Image Setting */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -690,11 +690,12 @@ body {
   position: absolute;
   font-size: 7rem;
   font-weight: 900;
-  opacity: 0.15;
+  opacity: 0.25;
   bottom: -20px;
   right: 10px;
   font-family: var(--font-serif);
   user-select: none;
+  color: #ffffff;
 }
 
 .card-icon {
@@ -955,24 +956,78 @@ body {
 }
 
 /* ==========================================================================
-   FOOTER
+   FOOTER & INFORMASI KONTAK
    ========================================================================== */
 .footer {
   background-color: var(--dark-navy);
-  padding: 40px 60px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 60px 60px 30px 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
 }
 
 .footer-container {
   max-width: 1280px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  max-width: 400px;
+  line-height: 1.6;
+  color: #94a3b8;
 }
 
 .white-text { color: #fff !important; }
 .white-sub { color: #94a3b8 !important; }
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.contact-list .icon {
+  font-size: 1rem;
+}
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 24px auto 0 auto;
+  text-align: center;
+}
 
 .copyright {
   color: #64748b;
@@ -1082,7 +1137,7 @@ body {
    RESPONSIVE DESIGN
    ========================================================================== */
 @media (max-width: 1024px) {
-  .hero-container, .agenda-container, .section-header {
+  .hero-container, .agenda-container, .section-header, .footer-container {
     grid-template-columns: 1fr;
   }
 
@@ -1104,7 +1159,7 @@ body {
 }
 
 @media (max-width: 640px) {
-  .navbar, .hero-section, .divisi-section, .agenda-section, .cta-section, .philosophy-section {
+  .navbar, .hero-section, .divisi-section, .agenda-section, .cta-section, .philosophy-section, .footer {
     padding: 24px;
   }
 

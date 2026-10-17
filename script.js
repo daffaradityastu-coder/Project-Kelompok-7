@@ -55,7 +55,7 @@ window.handleFormSubmit = function(event) {
   const noWA = inputs[2].value;
   const divisi = inputs[3].options[inputs[3].selectedIndex].text;
 
-  // Ganti nomor WA aktif pengurus di sini (format 628xxx)
+  // Ganti dengan nomor WhatsApp aktif pengurus UKM PNC (format: 628xxx)
   const nomorWAAdmin = '6281234567890'; 
 
   const pesan = `Halo Pengurus UKM Futsal PNC,%0A%0ASaya ingin mendaftar sebagai anggota baru UKM Futsal. Berikut data diri saya:%0A%0A` +

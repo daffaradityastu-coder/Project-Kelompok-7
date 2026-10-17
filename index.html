@@ -31,7 +31,7 @@
       <a href="#filosofi" class="nav-link">Filosofi</a>
       <a href="#divisi" class="nav-link">Divisi Tim</a>
       <a href="#agenda" class="nav-link">Jadwal Match</a>
-      <a href="#tentang" class="nav-link">Tentang UKM</a>
+      <a href="#kontak" class="nav-link">Kontak</a>
     </nav>
 
     <button type="button" class="btn btn-navy btn-open-join">
@@ -176,8 +176,9 @@
     </div>
 
     <div class="cards-grid">
+      <!-- Card 1 (Ganti URL foto sesuai kebutuhan) -->
       <div class="divisi-card" data-category="tim-utama">
-        <div class="card-banner style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('foto-tim-utama.jpg');">
+        <div class="card-banner bg-coral" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop');">
           <span class="watermark">PNC</span>
           <div class="card-icon">⚡</div>
           <button class="like-btn" onclick="toggleLike(this)">&#9825;</button>
@@ -193,8 +194,9 @@
         </div>
       </div>
 
+      <!-- Card 2 -->
       <div class="divisi-card" data-category="tim-putri">
-        <div class="card-banner bg-sky">
+        <div class="card-banner bg-sky" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=800&auto=format&fit=crop');">
           <span class="watermark">SKD</span>
           <div class="card-icon">🔥</div>
           <button class="like-btn" onclick="toggleLike(this)">&#9825;</button>
@@ -210,8 +212,9 @@
         </div>
       </div>
 
+      <!-- Card 3 -->
       <div class="divisi-card" data-category="akademi">
-        <div class="card-banner bg-lime">
+        <div class="card-banner bg-lime" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=800&auto=format&fit=crop');">
           <span class="watermark">FUN</span>
           <div class="card-icon">🎯</div>
           <button class="like-btn" onclick="toggleLike(this)">&#9825;</button>
@@ -227,8 +230,9 @@
         </div>
       </div>
 
+      <!-- Card 4 -->
       <div class="divisi-card" data-category="official">
-        <div class="card-banner bg-purple">
+        <div class="card-banner bg-purple" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop');">
           <span class="watermark">DOC</span>
           <div class="card-icon">📸</div>
           <button class="like-btn" onclick="toggleLike(this)">&#9825;</button>
@@ -271,8 +275,8 @@
               <span class="date-month">AGU</span>
             </div>
             <div class="agenda-info">
-              <span class="meta-info">📍 B20 - 16.00 WIB</span>
-              <h3 class="agenda-item-title">Friendly Match: PNC vs Universitas Amikom</h3>
+              <span class="meta-info">📍 GOR Indoor Cilacap - 16.00 WIB</span>
+              <h3 class="agenda-item-title">Friendly Match: PNC vs Universitas Cilacap</h3>
               <p>Laga persahabatan persiapaan babak kualifikasi Porseni Vokasi.</p>
             </div>
             <button class="btn-circle-action" onclick="openDetail('Friendly Match PNC', 'Datang dan dukung tim kampus tercinta Politeknik Negeri Cilacap!')">&rarr;</button>
@@ -296,7 +300,7 @@
   </section>
 
   <!-- CTA -->
-  <section id="tentang" class="cta-section">
+  <section class="cta-section">
     <div class="cta-card">
       <div class="badge-pill bg-light-green">
         <span class="check">✓</span> Terbuka Khusus Mahasiswa Aktif PNC
@@ -313,18 +317,50 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+  <!-- FOOTER DENGAN INFORMASI KONTAK -->
+  <footer id="kontak" class="footer">
     <div class="footer-container">
-      <a href="#" class="brand-logo white">
-        <div class="logo-wrapper bg-white-pnc">
-          <img src="https://upload.wikimedia.org/wikipedia/id/d/db/Politeknik_Negeri_Cilacap.png" alt="Logo PNC" class="logo-pnc" onerror="this.src='https://pnc.ac.id/wp-content/uploads/2021/04/Logo-PNC-Full-High-Res-1024x1024.png'">
-        </div>
-        <div class="brand-text">
-          <span class="logo-title white-text">FUTSAL <strong>PNC</strong></span>
-          <span class="logo-sub white-sub">Politeknik Negeri Cilacap</span>
-        </div>
-      </a>
+      <!-- Brand & Deskripsi -->
+      <div class="footer-brand">
+        <a href="#" class="brand-logo white">
+          <div class="logo-wrapper bg-white-pnc">
+            <img src="https://upload.wikimedia.org/wikipedia/id/d/db/Politeknik_Negeri_Cilacap.png" alt="Logo PNC" class="logo-pnc" onerror="this.src='https://pnc.ac.id/wp-content/uploads/2021/04/Logo-PNC-Full-High-Res-1024x1024.png'">
+          </div>
+          <div class="brand-text">
+            <span class="logo-title white-text">FUTSAL <strong>PNC</strong></span>
+            <span class="logo-sub white-sub">Politeknik Negeri Cilacap</span>
+          </div>
+        </a>
+        <p class="footer-tagline">
+          Wadah resmi pembinaan bakat, taktik, dan prestasi atlet futsal mahasiswa Politeknik Negeri Cilacap.
+        </p>
+      </div>
+
+      <!-- Detail Informasi Kontak -->
+      <div class="footer-contact">
+        <h4 class="footer-heading">Informasi & Sekretariat UKM</h4>
+        <ul class="contact-list">
+          <li>
+            <span class="icon">📍</span> 
+            <span>Gedung UKM / Lapangan Olahraga PNC, Jl. Dr. Soetomo No.1, Sidakaya, Cilacap Selatan</span>
+          </li>
+          <li>
+            <span class="icon">📱</span> 
+            <span>+62 812-3456-7890 (Humas & Pengurus UKM)</span>
+          </li>
+          <li>
+            <span class="icon">✉️</span> 
+            <span>futsal@pnc.ac.id</span>
+          </li>
+          <li>
+            <span class="icon">📸</span> 
+            <span>@futsalpnc_official</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
       <p class="copyright">&copy; 2026 UKM Futsal Politeknik Negeri Cilacap. All rights reserved.</p>
     </div>
   </footer>
