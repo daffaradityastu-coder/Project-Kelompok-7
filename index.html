@@ -10,12 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- File CSS Eksternal -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR / HEADER -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <a href="#" class="brand-logo">
       <div class="logo-wrapper">
@@ -40,24 +39,22 @@
     </button>
   </header>
 
-  <!-- HERO SECTION (COLORFUL & ENERGETIC) -->
+  <!-- HERO SECTION -->
   <section id="beranda" class="hero-section">
-    <!-- Background Glow Blobs Decorative -->
     <div class="glow-blob blob-1"></div>
     <div class="glow-blob blob-2"></div>
     <div class="glow-blob blob-3"></div>
 
     <div class="hero-container">
-      <!-- Left Hero Content -->
       <div class="hero-content">
         <div class="badge-pill">
           <span class="sparkle">⚙️</span> Spirit Gerigi & 3 Pilar PNC
         </div>
         
         <h1 class="hero-title">
-          Kuasai <span class="highlight-orange">lapangan.</span><br>
+          Kuasai <span class="highlight-blue">lapangan.</span><br>
           <span class="highlight-italic-blue">Harumkan nama PNC</span><br>
-          <span class="highlight-gold">bersama.</span>
+          <span class="highlight-lime">bersama.</span>
         </h1>
         
         <p class="hero-description">
@@ -65,7 +62,7 @@
         </p>
 
         <div class="hero-actions">
-          <button type="button" class="btn btn-orange btn-glow btn-open-join">
+          <button type="button" class="btn btn-blue btn-glow btn-open-join">
             Gabung UKM <span class="arrow">&rarr;</span>
           </button>
           <a href="#agenda" class="btn btn-outline-dark">
@@ -75,9 +72,9 @@
 
         <div class="social-proof">
           <div class="avatar-group">
-            <div class="avatar" style="background-color: #005B94; color: #fff;">P</div>
-            <div class="avatar" style="background-color: #F59E0B; color: #fff;">N</div>
-            <div class="avatar" style="background-color: #0F172A; color: #fff;">C</div>
+            <div class="avatar" style="background-color: #0284C7; color: #fff;">P</div>
+            <div class="avatar" style="background-color: #84CC16; color: #0f172a;">N</div>
+            <div class="avatar" style="background-color: #091E36; color: #fff;">C</div>
             <div class="avatar" style="background-color: #10B981; color: #fff;">26</div>
           </div>
           <div class="proof-text">
@@ -87,7 +84,6 @@
         </div>
       </div>
 
-      <!-- Right Hero Visual Collage -->
       <div class="hero-visual">
         <div class="poster-card">
           <div class="poster-tag">POLITEKNIK NEGERI CILACAP</div>
@@ -102,14 +98,12 @@
           </div>
         </div>
 
-        <!-- Floating Sticker Colorful -->
         <div class="sticker-green">
           <div class="star-icon">🏆</div>
           <div class="sticker-number">PNC</div>
           <div class="sticker-label">3 Pilar Kejayaan</div>
         </div>
 
-        <!-- Floating Schedule Card -->
         <div class="floating-event-card">
           <div class="event-icon">📢</div>
           <div class="event-details">
@@ -121,7 +115,7 @@
     </div>
   </section>
 
-  <!-- MARQUEE BARNER (ORANGE/GOLD RUNNING TEXT) -->
+  <!-- MARQUEE -->
   <div class="marquee-wrapper">
     <div class="marquee-track">
       <span>PROFESIONALISME</span> <span class="star">⚙️</span>
@@ -135,7 +129,7 @@
     </div>
   </div>
 
-  <!-- SECTION: FILOSOFI LOGO PNC -->
+  <!-- FILOSOFI -->
   <section id="filosofi" class="philosophy-section">
     <div class="philosophy-container">
       <div class="sub-label center">FILOSOFI LANDASAN UKM</div>
@@ -161,7 +155,7 @@
     </div>
   </section>
 
-  <!-- SECTION: DIVISI TIM -->
+  <!-- DIVISI -->
   <section id="divisi" class="divisi-section">
     <div class="section-header">
       <div class="header-left">
@@ -173,7 +167,6 @@
       </div>
     </div>
 
-    <!-- Filter Buttons -->
     <div class="filter-bar">
       <button class="filter-btn active" data-category="all">Semua</button>
       <button class="filter-btn" data-category="tim-utama">Tim Utama Putra</button>
@@ -182,9 +175,7 @@
       <button class="filter-btn" data-category="official">Official & Media</button>
     </div>
 
-    <!-- Grid Cards -->
     <div class="cards-grid">
-      <!-- Card 1 -->
       <div class="divisi-card" data-category="tim-utama">
         <div class="card-banner bg-coral">
           <span class="watermark">PNC</span>
@@ -192,7 +183,7 @@
           <button class="like-btn" onclick="toggleLike(this)">&#9825;</button>
         </div>
         <div class="card-body">
-          <span class="category-tag color-coral">TIM UTAMA PUTRA</span>
+          <span class="category-tag color-pnc-blue">TIM UTAMA PUTRA</span>
           <h3 class="card-title">Skuad Utama PNC</h3>
           <p class="card-desc">Tim inti kompetisi antar politeknik, Porseni Vokasi, dan turnamen tingkat Jawa Tengah.</p>
           <div class="card-footer">
@@ -202,7 +193,6 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="divisi-card" data-category="tim-putri">
         <div class="card-banner bg-sky">
           <span class="watermark">SKD</span>
@@ -220,7 +210,6 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
       <div class="divisi-card" data-category="akademi">
         <div class="card-banner bg-lime">
           <span class="watermark">FUN</span>
@@ -238,7 +227,6 @@
         </div>
       </div>
 
-      <!-- Card 4 -->
       <div class="divisi-card" data-category="official">
         <div class="card-banner bg-purple">
           <span class="watermark">DOC</span>
@@ -258,7 +246,7 @@
     </div>
   </section>
 
-  <!-- AGENDA / MATCH DAY SECTION -->
+  <!-- AGENDA -->
   <section id="agenda" class="agenda-section">
     <div class="agenda-container">
       <div class="agenda-left">
@@ -277,7 +265,6 @@
 
       <div class="agenda-right">
         <div class="agenda-list">
-          <!-- Item 1 -->
           <div class="agenda-item">
             <div class="date-box">
               <span class="date-num">24</span>
@@ -291,7 +278,6 @@
             <button class="btn-circle-action" onclick="openDetail('Friendly Match PNC', 'Datang dan dukung tim kampus tercinta Politeknik Negeri Cilacap!')">&rarr;</button>
           </div>
 
-          <!-- Item 2 -->
           <div class="agenda-item">
             <div class="date-box">
               <span class="date-num">30</span>
@@ -309,19 +295,19 @@
     </div>
   </section>
 
-  <!-- CTA REGISTER SECTION -->
+  <!-- CTA -->
   <section id="tentang" class="cta-section">
     <div class="cta-card">
       <div class="badge-pill bg-light-green">
         <span class="check">✓</span> Terbuka Khusus Mahasiswa Aktif PNC
       </div>
       <h2 class="cta-title">
-        Siap jadikan nama PNC <br><span class="highlight-orange">makin bersinar?</span>
+        Siap jadikan nama PNC <br><span class="highlight-blue">makin bersinar?</span>
       </h2>
       <p class="cta-desc">
         Jangan ragu untuk mendaftar. Tim pengurus UKM Futsal PNC siap menyambut dan memandu latihan pertamamu.
       </p>
-      <button type="button" class="btn btn-orange btn-lg btn-glow btn-open-join">
+      <button type="button" class="btn btn-blue btn-lg btn-glow btn-open-join">
         Formulir Pendaftaran UKM <span class="arrow">&rarr;</span>
       </button>
     </div>
@@ -373,7 +359,7 @@
             <option value="official">Official & Creative Media</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-orange form-submit">Kirim Pendaftaran &rarr;</button>
+        <button type="submit" class="btn btn-blue form-submit">Kirim Pendaftaran &rarr;</button>
       </form>
     </div>
   </div>
@@ -390,7 +376,6 @@
     </div>
   </div>
 
-  <!-- File JavaScript Eksternal -->
   <script src="script.js"></script>
 </body>
 </html>

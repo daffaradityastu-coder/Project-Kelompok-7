@@ -1,5 +1,5 @@
 // ==========================================
-// DEKLARASI FUNGSI GLOBAL MODAL & ACTION
+// FUNGSI MODAL & AKSI GLOBAL
 // ==========================================
 window.openJoinModal = function() {
   const modal = document.getElementById('joinModal');
@@ -37,29 +37,27 @@ window.closeDetailModal = function() {
 window.toggleLike = function(element) {
   element.classList.toggle('liked');
   if (element.classList.contains('liked')) {
-    element.innerHTML = '&#9829;'; // Heart Terisi
+    element.innerHTML = '&#9829;'; 
   } else {
-    element.innerHTML = '&#9825;'; // Heart Kosong
+    element.innerHTML = '&#9825;'; 
   }
 };
 
 // ==========================================
-// HANDLER FORM SUBMIT -> DIRECT TO WHATSAPP
+// FORM SUBMIT -> TERHUBUNG WA
 // ==========================================
 window.handleFormSubmit = function(event) {
   event.preventDefault();
 
-  // 1. Ambil data dari form input
   const inputs = event.target.querySelectorAll('input, select');
   const nama = inputs[0].value;
   const nimProdi = inputs[1].value;
   const noWA = inputs[2].value;
   const divisi = inputs[3].options[inputs[3].selectedIndex].text;
 
-  // 2. Ganti dengan nomor WhatsApp aktif pengurus/kamu (format: 628xxx)
-  const nomorWAAdmin = '6285867431371'; 
+  // Ganti nomor WA aktif pengurus di sini (format 628xxx)
+  const nomorWAAdmin = '6281234567890'; 
 
-  // 3. Susun isi pesan WhatsApp
   const pesan = `Halo Pengurus UKM Futsal PNC,%0A%0ASaya ingin mendaftar sebagai anggota baru UKM Futsal. Berikut data diri saya:%0A%0A` +
     `• *Nama Lengkap:* ${encodeURIComponent(nama)}%0A` +
     `• *NIM & Prodi:* ${encodeURIComponent(nimProdi)}%0A` +
@@ -67,20 +65,17 @@ window.handleFormSubmit = function(event) {
     `• *Pilihan Divisi:* ${encodeURIComponent(divisi)}%0A%0A` +
     `Mohon informasi mengenai jadwal latihan selanjutnya. Terima kasih!`;
 
-  // 4. Buka tautan WhatsApp di tab baru
   const urlWA = `https://wa.me/${nomorWAAdmin}?text=${pesan}`;
   window.open(urlWA, '_blank');
 
-  // 5. Tutup modal & bersihkan form
   closeJoinModal();
   event.target.reset();
 };
 
 // ==========================================
-// EVENT LISTENERS SAAT DOM SIAP
+// DOM EVENT LISTENERS
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-  // Listener tombol Gabung UKM
   const joinBtns = document.querySelectorAll('.btn-open-join');
   joinBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -89,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Filter Kategori Divisi
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.divisi-card');
 
@@ -111,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Close Modal saat klik area luar backdrop
   window.addEventListener('click', (event) => {
     const joinModal = document.getElementById('joinModal');
     const detailModal = document.getElementById('detailModal');

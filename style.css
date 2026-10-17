@@ -1,24 +1,24 @@
 /* ==========================================================================
-   VARIABLES & COLOR PALETTE
+   OPSI 1: ELECTRIC BLUE & NEON LIME PALETTE
    ========================================================================== */
 :root {
-  --bg-cream: #FAF8F5;
+  --bg-cream: #F8FAFC;             
   --bg-white: #FFFFFF;
-  --text-dark: #0F172A;
+  --text-dark: #0F172A;            
   --text-muted: #64748B;
   
-  --pnc-blue: #005B94;
-  --pnc-gold: #F59E0B;
-  --accent-orange: #F25A38;
-  --accent-orange-hover: #D94827;
-  --dark-navy: #0F2936;
-  --navy-card: #193847;
+  --pnc-blue: #0284C7;             
+  --pnc-lime: #84CC16;             
+  --accent-blue: #2563EB;        
+  --accent-blue-hover: #1D4ED8;
+  --dark-navy: #091E36;            
+  --navy-card: #112A46;
   
   /* Pastel Card Colors */
-  --card-coral: #F8B4A6;
-  --card-sky: #B3D9EA;
-  --card-lime: #D2EC66;
-  --card-purple: #D7C4F2;
+  --card-coral: #BAE6FD;
+  --card-sky: #93C5FD;
+  --card-lime: #D9F99D;
+  --card-purple: #DDD6FE;
   
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
@@ -57,7 +57,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 18px 60px;
-  background-color: rgba(250, 248, 245, 0.9);
+  background-color: rgba(248, 250, 252, 0.9);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
@@ -127,7 +127,7 @@ body {
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--accent-orange);
+  color: var(--accent-blue);
 }
 
 /* ==========================================================================
@@ -153,24 +153,24 @@ body {
 }
 
 .btn-navy:hover {
-  background-color: #1e3a8a;
+  background-color: #1d4ed8;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(15, 41, 54, 0.25);
+  box-shadow: 0 6px 16px rgba(9, 30, 54, 0.25);
 }
 
-.btn-orange {
-  background-color: var(--accent-orange);
+.btn-blue {
+  background-color: var(--accent-blue);
   color: #fff;
 }
 
-.btn-orange:hover {
-  background-color: var(--accent-orange-hover);
+.btn-blue:hover {
+  background-color: var(--accent-blue-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(242, 90, 56, 0.3);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
 
 .btn-glow {
-  box-shadow: 0 8px 24px rgba(242, 90, 56, 0.35);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
 }
 
 .btn-outline-dark {
@@ -199,16 +199,15 @@ body {
 }
 
 /* ==========================================================================
-   HERO SECTION (VIBRANT & DYNAMIC)
+   HERO SECTION
    ========================================================================== */
 .hero-section {
   padding: 50px 60px 90px 60px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #FAF8F5 0%, #F0F6FF 60%, #FFF5EF 100%);
+  background: linear-gradient(135deg, #F8FAFC 0%, #E0F2FE 60%, #F0FDF4 100%);
 }
 
-/* Decorative Glow Blobs */
 .glow-blob {
   position: absolute;
   border-radius: 50%;
@@ -220,7 +219,7 @@ body {
 .blob-1 {
   width: 320px;
   height: 320px;
-  background: rgba(242, 90, 56, 0.18);
+  background: rgba(2, 132, 199, 0.2);
   top: -50px;
   left: -50px;
 }
@@ -228,7 +227,7 @@ body {
 .blob-2 {
   width: 380px;
   height: 380px;
-  background: rgba(0, 91, 148, 0.15);
+  background: rgba(37, 99, 235, 0.15);
   top: 100px;
   right: -50px;
 }
@@ -236,7 +235,7 @@ body {
 .blob-3 {
   width: 280px;
   height: 280px;
-  background: rgba(245, 158, 11, 0.18);
+  background: rgba(132, 204, 22, 0.2);
   bottom: -40px;
   left: 30%;
 }
@@ -257,14 +256,14 @@ body {
   align-items: center;
   gap: 8px;
   padding: 8px 18px;
-  background: linear-gradient(135deg, #FFE8E0 0%, #FFF3D6 100%);
-  color: var(--accent-orange);
-  border: 1px solid rgba(242, 90, 56, 0.3);
+  background: linear-gradient(135deg, #E0F2FE 0%, #ECFDF5 100%);
+  color: var(--pnc-blue);
+  border: 1px solid rgba(2, 132, 199, 0.3);
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 700;
   margin-bottom: 24px;
-  box-shadow: 0 4px 12px rgba(242, 90, 56, 0.08);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
 }
 
 .hero-title {
@@ -277,33 +276,32 @@ body {
   letter-spacing: -1.5px;
 }
 
-/* Multi-color Highlight Words */
-.highlight-orange {
-  color: var(--accent-orange);
+.highlight-blue {
+  color: var(--pnc-blue);
   position: relative;
   display: inline-block;
 }
 
-.highlight-orange::after {
+.highlight-blue::after {
   content: '';
   position: absolute;
   bottom: 8px;
   left: 0;
   width: 100%;
   height: 12px;
-  background-color: rgba(242, 90, 56, 0.18);
+  background-color: rgba(2, 132, 199, 0.18);
   z-index: -1;
   border-radius: 4px;
 }
 
 .highlight-italic-blue {
   font-style: italic;
-  color: var(--pnc-blue);
+  color: var(--accent-blue);
   font-weight: 700;
 }
 
-.highlight-gold {
-  color: var(--pnc-gold);
+.highlight-lime {
+  color: #65A30D;
   font-style: italic;
   font-weight: 700;
 }
@@ -361,7 +359,6 @@ body {
   color: var(--text-dark);
 }
 
-/* Hero Visual Collage */
 .hero-visual {
   position: relative;
   display: flex;
@@ -372,12 +369,12 @@ body {
 .poster-card {
   width: 340px;
   height: 440px;
-  background: linear-gradient(145deg, #0B192C 0%, #004570 100%);
+  background: linear-gradient(145deg, #091E36 0%, #0284C7 100%);
   border-radius: var(--radius-lg);
   padding: 32px;
   color: #fff;
   position: relative;
-  box-shadow: 0 24px 48px rgba(11, 25, 44, 0.25);
+  box-shadow: 0 24px 48px rgba(9, 30, 54, 0.25);
   transform: rotate(3deg);
   display: flex;
   flex-direction: column;
@@ -389,7 +386,7 @@ body {
 .poster-tag {
   font-size: 0.7rem;
   letter-spacing: 2px;
-  color: var(--pnc-gold);
+  color: var(--pnc-lime);
   font-weight: 700;
 }
 
@@ -402,7 +399,7 @@ body {
 }
 
 .text-lime {
-  color: var(--card-lime);
+  color: var(--pnc-lime);
 }
 
 .poster-sub {
@@ -428,7 +425,7 @@ body {
 .poster-badge {
   position: absolute;
   bottom: 12px;
-  background-color: var(--accent-orange);
+  background-color: var(--accent-blue);
   color: #fff;
   font-size: 0.65rem;
   font-weight: 800;
@@ -437,17 +434,16 @@ body {
   letter-spacing: 1px;
 }
 
-/* Floating Sticker popping */
 .sticker-green {
   position: absolute;
   bottom: 20px;
   left: 10px;
-  background: linear-gradient(135deg, #E2F671 0%, #C3EC3A 100%);
+  background: linear-gradient(135deg, #D9F99D 0%, #84CC16 100%);
   color: #0F172A;
   padding: 20px;
   border-radius: 22px;
   width: 135px;
-  box-shadow: 0 14px 28px rgba(163, 230, 53, 0.35);
+  box-shadow: 0 14px 28px rgba(132, 204, 22, 0.35);
   transform: rotate(-8deg);
   z-index: 10;
   border: 2px solid #fff;
@@ -506,7 +502,7 @@ body {
    MARQUEE
    ========================================================================== */
 .marquee-wrapper {
-  background: linear-gradient(90deg, var(--accent-orange) 0%, #E6431E 100%);
+  background: linear-gradient(90deg, var(--pnc-blue) 0%, var(--accent-blue) 100%);
   color: #fff;
   padding: 16px 0;
   overflow: hidden;
@@ -559,7 +555,7 @@ body {
 }
 
 .philo-card.highlight {
-  background-color: #EFF6FF;
+  background-color: #F0F9FF;
   border-color: var(--pnc-blue);
 }
 
@@ -585,7 +581,7 @@ body {
 }
 
 /* ==========================================================================
-   SECTION: DIVISI
+   DIVISI SECTION
    ========================================================================== */
 .divisi-section {
   padding: 100px 60px;
@@ -605,7 +601,7 @@ body {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: var(--accent-orange);
+  color: var(--pnc-blue);
   display: block;
   margin-bottom: 12px;
 }
@@ -622,7 +618,6 @@ body {
   font-size: 1.05rem;
 }
 
-/* Filters */
 .filter-bar {
   display: flex;
   gap: 12px;
@@ -651,7 +646,6 @@ body {
   border-color: var(--text-dark);
 }
 
-/* Cards Grid */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -737,7 +731,7 @@ body {
   margin-bottom: 8px;
 }
 
-.color-coral { color: #d9381e; }
+.color-pnc-blue { color: var(--pnc-blue); }
 .color-sky { color: #1e6280; }
 .color-lime { color: #4d6600; }
 .color-purple { color: #5b21b6; }
@@ -784,11 +778,11 @@ body {
 }
 
 .icon-arrow-btn:hover {
-  background-color: var(--accent-orange);
+  background-color: var(--accent-blue);
 }
 
 /* ==========================================================================
-   AGENDA / MATCH SECTION
+   AGENDA SECTION
    ========================================================================== */
 .agenda-section {
   background-color: var(--dark-navy);
@@ -848,7 +842,7 @@ body {
 }
 
 .agenda-item:hover {
-  background-color: #204557;
+  background-color: #1a385c;
 }
 
 .date-box {
@@ -989,7 +983,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(15, 41, 54, 0.7);
+  background: rgba(9, 30, 54, 0.7);
   backdrop-filter: blur(5px);
   display: none;
   align-items: center;
@@ -1069,8 +1063,8 @@ body {
 }
 
 .form-group input:focus, .form-group select:focus {
-  border-color: var(--accent-orange);
-  box-shadow: 0 0 0 3px rgba(242, 90, 56, 0.15);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .form-submit {
