@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divisi Tim - UKM Futsal Politeknik Negeri Cilacap</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="brand-logo">
+      <div class="logo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/id/d/db/Politeknik_Negeri_Cilacap.png" alt="Logo PNC" class="logo-pnc" onerror="this.src='https://pnc.ac.id/wp-content/uploads/2021/04/Logo-PNC-Full-High-Res-1024x1024.png'">
+      </div>
+      <div class="brand-text">
+        <span class="logo-title">FUTSAL <strong>PNC</strong></span>
+        <span class="logo-sub">Politeknik Negeri Cilacap</span>
+      </div>
+    </a>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="filosofi.html" class="nav-link">Filosofi</a>
+      <a href="divisi.html" class="nav-link active">Divisi Tim</a>
+      <a href="jadwal.html" class="nav-link">Jadwal Match</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+      <a href="profil.html" class="nav-link">Profil</a>
+    </nav>
+
+    <button type="button" class="btn btn-navy btn-open-join" onclick="openJoinModal()">
+      Gabung UKM <span class="arrow">&rarr;</span>
+    </button>
+  </header>
+
+  <!-- DIVISI -->
+  <section id="divisi" class="divisi-section">
+    <div class="section-header">
+      <div class="header-left">
+        <span class="sub-label">STRUKTUR TIM UKM FUTSAL PNC</span>
+        <h2 class="section-title">Temukan peranmu di tim PNC.</h2>
+      </div>
+      <div class="header-right">
+        <p>Setiap juru taktik, atlet, dan kru media di Politeknik Negeri Cilacap punya peran penting untuk membawa kemenangan bersama.</p>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-category="all">Semua</button>
+      <button class="filter-btn" data-category="tim-utama">Tim Utama Putra</button>
+      <button class="filter-btn" data-category="tim-putri">Tim Putri Srikandi</button>
+      <button class="filter-btn" data-category="akademi">Fun Futsal Mahasiswa</button>
+      <button class="filter-btn" data-category="official">Official & Media</button>
+    </div>
+
+    <div class="cards-grid">
+      <div class="divisi-card" data-category="tim-utama">
+        <div class="card-banner bg-coral" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop');">
+          <span class="watermark">PNC</span>
+          <div class="card-icon">⚡</div>
+          <button class="like-btn" onclick="toggleLike(this)">&#9825;</button>
+        </div>
+        <div class="card-body">
+          <span class="category-tag color-pnc-blue">TIM UTAMA PUTRA</span>
+          <h3 class="card-title">Skuad Utama PNC</h3>
+          <p class="card-desc">Tim inti kompetisi antar politeknik, Porseni Vokasi, dan turnamen tingkat Jawa Tengah.</p>
+          <div class="card-footer">
+            <span class="member-count">👥 20 Atlet PNC</span>
+            <button class="icon-arrow-btn" onclick="openDetail('Skuad Utama PNC', 'Skuad unggulan Politeknik Negeri Cilacap yang difokuskan untuk kejuaraan resmi regional dan nasional.')">&rarr;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="divisi-card" data-category="tim-putri">
+        <div class="card-banner bg-sky" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=800&auto=format&fit=crop');">
+          <span class="watermark">SKD</span>
+          <div class="card-icon">🔥</div>
+          <button class="like-btn" onclick="toggleLike(this)">&#9825;</button>
+        </div>
+        <div class="card-body">
+          <span class="category-tag color-sky">TIM PUTRI</span>
+          <h3 class="card-title">Srikandi Futsal PNC</h3>
+          <p class="card-desc">Komunitas & tim futsal mahasiswi PNC yang solid, bersemangat, dan berprestasi.</p>
+          <div class="card-footer">
+            <span class="member-count">👥 16 Atlet PNC</span>
+            <button class="icon-arrow-btn" onclick="openDetail('Srikandi Futsal PNC', 'Wadah pengembangan skill dan taktik futsal bagi mahasiswi aktif Politeknik Negeri Cilacap.')">&rarr;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="divisi-card" data-category="akademi">
+        <div class="card-banner bg-lime" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=800&auto=format&fit=crop');">
+          <span class="watermark">FUN</span>
+          <div class="card-icon">🎯</div>
+          <button class="like-btn" onclick="toggleLike(this)">&#9825;</button>
+        </div>
+        <div class="card-body">
+          <span class="category-tag color-lime">FUN FUTSAL</span>
+          <h3 class="card-title">PNC Development & Fun Match</h3>
+          <p class="card-desc">Latihan rutin mingguan antar jurusan di PNC untuk melatih kebugaran dan menyalurkan hobi.</p>
+          <div class="card-footer">
+            <span class="member-count">👥 110 Anggota</span>
+            <button class="icon-arrow-btn" onclick="openDetail('PNC Development & Fun Match', 'Kelas rutin untuk seluruh mahasiswa PNC tanpa memandang skill awal. Tempat terbaik mencari teman baru antar jurusan.')">&rarr;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="divisi-card" data-category="official">
+        <div class="card-banner bg-purple" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop');">
+          <span class="watermark">DOC</span>
+          <div class="card-icon">📸</div>
+          <button class="like-btn" onclick="toggleLike(this)">&#9825;</button>
+        </div>
+        <div class="card-body">
+          <span class="category-tag color-purple">OFFICIAL & MEDIA</span>
+          <h3 class="card-title">Media & Creative Team PNC</h3>
+          <p class="card-desc">Mengelola dokumentasi pertandingan, siaran langsung, desain poster match, dan sosial media UKM.</p>
+          <div class="card-footer">
+            <span class="member-count">👥 12 Kru Creative</span>
+            <button class="icon-arrow-btn" onclick="openDetail('Media & Creative Team PNC', 'Divisi penunjang yang menangani publikasi visual, konten Instagram/TikTok, dan administrasi UKM Futsal PNC.')">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="index.html" class="brand-logo white">
+        <div class="logo-wrapper bg-white-pnc">
+          <img src="https://upload.wikimedia.org/wikipedia/id/d/db/Politeknik_Negeri_Cilacap.png" alt="Logo PNC" class="logo-pnc" onerror="this.src='https://pnc.ac.id/wp-content/uploads/2021/04/Logo-PNC-Full-High-Res-1024x1024.png'">
+        </div>
+        <div class="brand-text">
+          <span class="logo-title white-text">FUTSAL <strong>PNC</strong></span>
+          <span class="logo-sub white-sub">Politeknik Negeri Cilacap</span>
+        </div>
+      </a>
+      <p class="copyright">&copy; 2026 UKM Futsal Politeknik Negeri Cilacap. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL DETAIL -->
+  <div id="detailModal" class="modal-backdrop">
+    <div class="modal-content">
+      <button type="button" class="modal-close" onclick="closeDetailModal()">&times;</button>
+      <h2 id="detailTitle" class="modal-header-title">Detail Informasi</h2>
+      <p id="detailBody" class="modal-header-sub" style="margin-top:15px; font-size: 1rem; color: #4b5563;">
+        Deskripsi lengkap akan muncul di sini...
+      </p>
+      <button type="button" class="btn btn-navy" style="margin-top:20px;" onclick="closeDetailModal()">Tutup</button>
+    </div>
+  </div>
+
+  <!-- MODAL FORM REGISTRASI -->
+  <div id="joinModal" class="modal-backdrop">
+    <div class="modal-content">
+      <button type="button" class="modal-close" onclick="closeJoinModal()">&times;</button>
+      <h2 class="modal-header-title">Pendaftaran UKM Futsal PNC</h2>
+      <p class="modal-header-sub">Isi data dirimu untuk bergabung dengan keluarga besar Futsal PNC.</p>
+      
+      <form id="regForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label>Nama Lengkap</label>
+          <input type="text" required placeholder="Contoh: Ahmad Rizky">
+        </div>
+        <div class="form-group">
+          <label>NIM & Jurusan / Prodi PNC</label>
+          <input type="text" required placeholder="Contoh: 230102001 - D3 Teknik Informatika">
+        </div>
+        <div class="form-group">
+          <label>Nomor WhatsApp</label>
+          <input type="tel" required placeholder="081234567890">
+        </div>
+        <div class="form-group">
+          <label>Pilihan Divisi Tim</label>
+          <select required>
+            <option value="">-- Pilih Divisi --</option>
+            <option value="pria">Tim Utama Putra PNC</option>
+            <option value="putri">Tim Putri Srikandi PNC</option>
+            <option value="akademi">Fun Futsal Mahasiswa PNC</option>
+            <option value="official">Official & Creative Media</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-blue form-submit">Kirim Pendaftaran &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

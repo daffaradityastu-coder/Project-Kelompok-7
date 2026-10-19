@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda - UKM Futsal Politeknik Negeri Cilacap</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="brand-logo">
+      <div class="logo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/id/d/db/Politeknik_Negeri_Cilacap.png" alt="Logo PNC" class="logo-pnc" onerror="this.src='https://pnc.ac.id/wp-content/uploads/2021/04/Logo-PNC-Full-High-Res-1024x1024.png'">
+      </div>
+      <div class="brand-text">
+        <span class="logo-title">FUTSAL <strong>PNC</strong></span>
+        <span class="logo-sub">Politeknik Negeri Cilacap</span>
+      </div>
+    </a>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link active">Beranda</a>
+      <a href="filosofi.html" class="nav-link">Filosofi</a>
+      <a href="divisi.html" class="nav-link">Divisi Tim</a>
+      <a href="jadwal.html" class="nav-link">Jadwal Match</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+      <a href="profil.html" class="nav-link">Profil</a>
+    </nav>
+
+    <button type="button" class="btn btn-navy btn-open-join" onclick="openJoinModal()">
+      Gabung UKM <span class="arrow">&rarr;</span>
+    </button>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="beranda" class="hero-section">
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+    <div class="glow-blob blob-3"></div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="badge-pill">
+          <span class="sparkle">⚙️</span> Spirit Gerigi & 3 Pilar PNC
+        </div>
+        
+        <h1 class="hero-title">
+          Kuasai <span class="highlight-blue">lapangan.</span><br>
+          <span class="highlight-italic-blue">Harumkan nama PNC</span><br>
+          <span class="highlight-lime">bersama.</span>
+        </h1>
+        
+        <p class="hero-description">
+          Selamat datang di situs resmi Unit Kegiatan Mahasiswa (UKM) Futsal Politeknik Negeri Cilacap. Berlandaskan <strong>Profesionalisme, Kesuksesan, dan Kejayaan</strong>.
+        </p>
+
+        <div class="hero-actions">
+          <button type="button" class="btn btn-blue btn-glow btn-open-join" onclick="openJoinModal()">
+            Gabung UKM <span class="arrow">&rarr;</span>
+          </button>
+          <a href="jadwal.html" class="btn btn-outline-dark">
+            Jadwal Seleksi & Match <span class="circle-arrow">&rsaquo;</span>
+          </a>
+        </div>
+
+        <div class="social-proof">
+          <div class="avatar-group">
+            <div class="avatar" style="background-color: #0284C7; color: #fff;">P</div>
+            <div class="avatar" style="background-color: #84CC16; color: #0f172a;">N</div>
+            <div class="avatar" style="background-color: #091E36; color: #fff;">C</div>
+            <div class="avatar" style="background-color: #10B981; color: #fff;">26</div>
+          </div>
+          <div class="proof-text">
+            <strong>180+ Mahasiswa PNC</strong>
+            <span>aktif berjuang & membela almamater</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="poster-card">
+          <div class="poster-tag">POLITEKNIK NEGERI CILACAP</div>
+          <h2 class="poster-headline">BLUE<br><span class="text-lime">SQUAD!</span></h2>
+          <p class="poster-sub">PNC Futsal Championship & League</p>
+          
+          <div class="poster-graphic">
+            <div class="player-silhouette">
+              <span>⚽⚙️</span>
+            </div>
+            <div class="poster-badge">PNC CHAMPIONS</div>
+          </div>
+        </div>
+
+        <div class="sticker-green">
+          <div class="star-icon">🏆</div>
+          <div class="sticker-number">PNC</div>
+          <div class="sticker-label">3 Pilar Kejayaan</div>
+        </div>
+
+        <div class="floating-event-card">
+          <div class="event-icon">📢</div>
+          <div class="event-details">
+            <span class="event-time">Jumat, 15:30 WIB</span>
+            <span class="event-title">Seleksi Pemain Utama PNC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span>PROFESIONALISME</span> <span class="star">⚙️</span>
+      <span>KESUKSESAN</span> <span class="star">⚙️</span>
+      <span>KEJAYAAN</span> <span class="star">⚙️</span>
+      <span>POLITEKNIK NEGERI CILACAP</span> <span class="star">⚙️</span>
+      <span>UKM FUTSAL PNC</span> <span class="star">⚙️</span>
+      <span>PROFESIONALISME</span> <span class="star">⚙️</span>
+      <span>KESUKSESAN</span> <span class="star">⚙️</span>
+      <span>KEJAYAAN</span> <span class="star">⚙️</span>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-card">
+      <div class="badge-pill bg-light-green">
+        <span class="check">✓</span> Terbuka Khusus Mahasiswa Aktif PNC
+      </div>
+      <h2 class="cta-title">
+        Siap jadikan nama PNC <br><span class="highlight-blue">makin bersinar?</span>
+      </h2>
+      <p class="cta-desc">
+        Jangan ragu untuk mendaftar. Tim pengurus UKM Futsal PNC siap menyambut dan memandu latihan pertamamu.
+      </p>
+      <button type="button" class="btn btn-blue btn-lg btn-glow btn-open-join" onclick="openJoinModal()">
+        Formulir Pendaftaran UKM <span class="arrow">&rarr;</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="index.html" class="brand-logo white">
+        <div class="logo-wrapper bg-white-pnc">
+          <img src="https://upload.wikimedia.org/wikipedia/id/d/db/Politeknik_Negeri_Cilacap.png" alt="Logo PNC" class="logo-pnc" onerror="this.src='https://pnc.ac.id/wp-content/uploads/2021/04/Logo-PNC-Full-High-Res-1024x1024.png'">
+        </div>
+        <div class="brand-text">
+          <span class="logo-title white-text">FUTSAL <strong>PNC</strong></span>
+          <span class="logo-sub white-sub">Politeknik Negeri Cilacap</span>
+        </div>
+      </a>
+      <p class="copyright">&copy; 2026 UKM Futsal Politeknik Negeri Cilacap. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL FORM REGISTRASI -->
+  <div id="joinModal" class="modal-backdrop">
+    <div class="modal-content">
+      <button type="button" class="modal-close" onclick="closeJoinModal()">&times;</button>
+      <h2 class="modal-header-title">Pendaftaran UKM Futsal PNC</h2>
+      <p class="modal-header-sub">Isi data dirimu untuk bergabung dengan keluarga besar Futsal PNC.</p>
+      
+      <form id="regForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label>Nama Lengkap</label>
+          <input type="text" required placeholder="Contoh: Ahmad Rizky">
+        </div>
+        <div class="form-group">
+          <label>NIM & Jurusan / Prodi PNC</label>
+          <input type="text" required placeholder="Contoh: 230102001 - D3 Teknik Informatika">
+        </div>
+        <div class="form-group">
+          <label>Nomor WhatsApp</label>
+          <input type="tel" required placeholder="081234567890">
+        </div>
+        <div class="form-group">
+          <label>Pilihan Divisi Tim</label>
+          <select required>
+            <option value="">-- Pilih Divisi --</option>
+            <option value="pria">Tim Utama Putra PNC</option>
+            <option value="putri">Tim Putri Srikandi PNC</option>
+            <option value="akademi">Fun Futsal Mahasiswa PNC</option>
+            <option value="official">Official & Creative Media</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-blue form-submit">Kirim Pendaftaran &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>git add .
