@@ -22,7 +22,7 @@ window.openDetail = function(title, description) {
   
   if (titleEl && bodyEl && modal) {
     titleEl.innerText = title;
-    bodyEl.innerText = description;
+    bodyEl.innerHTML = description; 
     modal.classList.add('active');
   }
 };
@@ -44,6 +44,29 @@ window.toggleLike = function(element) {
 };
 
 // ==========================================
+// FUNGSI FILTER UNIVERSAL (PROFIL & DIVISI)
+// ==========================================
+window.filterProfil = function(category, btnElement) {
+  const currentSection = btnElement.closest('section');
+  if (!currentSection) return;
+
+  const filterBtns = currentSection.querySelectorAll('.filter-btn');
+  filterBtns.forEach(btn => btn.classList.remove('active'));
+  btnElement.classList.add('active');
+
+  const cards = currentSection.querySelectorAll('.divisi-card');
+  cards.forEach(card => {
+    const cardCategory = card.getAttribute('data-category');
+    
+    if (category === 'all' || cardCategory === category) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+};
+
+// ==========================================
 // FORM SUBMIT -> TERHUBUNG WA
 // ==========================================
 window.handleFormSubmit = function(event) {
@@ -55,7 +78,6 @@ window.handleFormSubmit = function(event) {
   const noWA = inputs[2].value;
   const divisi = inputs[3].options[inputs[3].selectedIndex].text;
 
-  // Ganti dengan nomor WhatsApp aktif pengurus UKM PNC (format: 628xxx)
   const nomorWAAdmin = '6281234567890'; 
 
   const pesan = `Halo Pengurus UKM Futsal PNC,%0A%0ASaya ingin mendaftar sebagai anggota baru UKM Futsal. Berikut data diri saya:%0A%0A` +
@@ -85,23 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.divisi-card');
-
   filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const selectedCategory = btn.getAttribute('data-category');
-
-      cards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        if (selectedCategory === 'all' || cardCategory === selectedCategory) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+    btn.addEventListener('click', function() {
+      const category = this.getAttribute('data-category');
+      if (category) {
+        filterProfil(category, this);
+      }
     });
   });
 
