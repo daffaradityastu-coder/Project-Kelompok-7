@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Match - UKM Futsal Politeknik Negeri Cilacap</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="brand-logo">
+      <div class="logo-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/id/d/db/Politeknik_Negeri_Cilacap.png" alt="Logo PNC" class="logo-pnc" onerror="this.src='https://pnc.ac.id/wp-content/uploads/2021/04/Logo-PNC-Full-High-Res-1024x1024.png'">
+      </div>
+      <div class="brand-text">
+        <span class="logo-title">FUTSAL <strong>PNC</strong></span>
+        <span class="logo-sub">Politeknik Negeri Cilacap</span>
+      </div>
+    </a>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="filosofi.html" class="nav-link">Filosofi</a>
+      <a href="divisi.html" class="nav-link">Divisi Tim</a>
+      <a href="jadwal.html" class="nav-link active">Jadwal Match</a>
+      <a href="kontak.html" class="nav-link">Kontak</a>
+      <a href="profil.html" class="nav-link">Profil</a>
+    </nav>
+
+    <button type="button" class="btn btn-navy btn-open-join" onclick="openJoinModal()">
+      Gabung UKM <span class="arrow">&rarr;</span>
+    </button>
+  </header>
+
+  <!-- AGENDA -->
+  <section id="agenda" class="agenda-section">
+    <div class="agenda-container">
+      <div class="agenda-left">
+        <span class="agenda-sub">JADWAL MENDATANG</span>
+        <h2 class="agenda-title">
+          Agenda Match &<br>
+          <span class="italic-lime">Kegiatan UKM PNC.</span>
+        </h2>
+        <p class="agenda-desc">
+          Ikuti laga latihan, seleksi terbuka, dan dukungan untuk tim futsal Politeknik Negeri Cilacap.
+        </p>
+        <button class="btn btn-white" onclick="alert('Jadwal kegiatan UKM telah disinkronkan dengan kalender PNC!')">
+          Lihat Semua Agenda <span class="arrow">&rarr;</span>
+        </button>
+      </div>
+
+      <div class="agenda-right">
+        <div class="agenda-list">
+          <div class="agenda-item">
+            <div class="date-box">
+              <span class="date-num">24</span>
+              <span class="date-month">AGU</span>
+            </div>
+            <div class="agenda-info">
+              <span class="meta-info">📍 GOR Indoor Cilacap - 16.00 WIB</span>
+              <h3 class="agenda-item-title">Friendly Match: PNC vs Universitas Cilacap</h3>
+              <p>Laga persahabatan persiapaan babak kualifikasi Porseni Vokasi.</p>
+            </div>
+            <button class="btn-circle-action" onclick="openDetail('Friendly Match PNC', 'Datang dan dukung tim kampus tercinta Politeknik Negeri Cilacap!')">&rarr;</button>
+          </div>
+
+          <div class="agenda-item">
+            <div class="date-box">
+              <span class="date-num">30</span>
+              <span class="date-month">AGU</span>
+            </div>
+            <div class="agenda-info">
+              <span class="meta-info">📍 Lapangan Olahraga PNC - 15.30 WIB</span>
+              <h3 class="agenda-item-title">Open Selection Mahasiswa Baru PNC</h3>
+              <p>Seleksi pemain baru terbuka untuk seluruh mahasiswa aktif Politeknik Negeri Cilacap.</p>
+            </div>
+            <button class="btn-circle-action" onclick="openDetail('Open Selection PNC', 'Bawa sepatu futsal dan perlengkapan latihan pribadi. Terbuka untuk seluruh jurusan di PNC.')">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="index.html" class="brand-logo white">
+        <div class="logo-wrapper bg-white-pnc">
+          <img src="https://upload.wikimedia.org/wikipedia/id/d/db/Politeknik_Negeri_Cilacap.png" alt="Logo PNC" class="logo-pnc" onerror="this.src='https://pnc.ac.id/wp-content/uploads/2021/04/Logo-PNC-Full-High-Res-1024x1024.png'">
+        </div>
+        <div class="brand-text">
+          <span class="logo-title white-text">FUTSAL <strong>PNC</strong></span>
+          <span class="logo-sub white-sub">Politeknik Negeri Cilacap</span>
+        </div>
+      </a>
+      <p class="copyright">&copy; 2026 UKM Futsal Politeknik Negeri Cilacap. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL DETAIL -->
+  <div id="detailModal" class="modal-backdrop">
+    <div class="modal-content">
+      <button type="button" class="modal-close" onclick="closeDetailModal()">&times;</button>
+      <h2 id="detailTitle" class="modal-header-title">Detail Informasi</h2>
+      <p id="detailBody" class="modal-header-sub" style="margin-top:15px; font-size: 1rem; color: #4b5563;">
+        Deskripsi lengkap akan muncul di sini...
+      </p>
+      <button type="button" class="btn btn-navy" style="margin-top:20px;" onclick="closeDetailModal()">Tutup</button>
+    </div>
+  </div>
+
+  <!-- MODAL FORM REGISTRASI -->
+  <div id="joinModal" class="modal-backdrop">
+    <div class="modal-content">
+      <button type="button" class="modal-close" onclick="closeJoinModal()">&times;</button>
+      <h2 class="modal-header-title">Pendaftaran UKM Futsal PNC</h2>
+      <p class="modal-header-sub">Isi data dirimu untuk bergabung dengan keluarga besar Futsal PNC.</p>
+      
+      <form id="regForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label>Nama Lengkap</label>
+          <input type="text" required placeholder="Contoh: Ahmad Rizky">
+        </div>
+        <div class="form-group">
+          <label>NIM & Jurusan / Prodi PNC</label>
+          <input type="text" required placeholder="Contoh: 230102001 - D3 Teknik Informatika">
+        </div>
+        <div class="form-group">
+          <label>Nomor WhatsApp</label>
+          <input type="tel" required placeholder="081234567890">
+        </div>
+        <div class="form-group">
+          <label>Pilihan Divisi Tim</label>
+          <select required>
+            <option value="">-- Pilih Divisi --</option>
+            <option value="pria">Tim Utama Putra PNC</option>
+            <option value="putri">Tim Putri Srikandi PNC</option>
+            <option value="akademi">Fun Futsal Mahasiswa PNC</option>
+            <option value="official">Official & Creative Media</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-blue form-submit">Kirim Pendaftaran &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
